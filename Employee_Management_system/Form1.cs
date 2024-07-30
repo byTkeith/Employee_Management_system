@@ -21,5 +21,10 @@ namespace Employee_Management_system
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
