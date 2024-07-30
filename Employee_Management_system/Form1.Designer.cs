@@ -39,6 +39,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,9 +118,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(315, 320);
@@ -155,9 +157,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Navy;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(84, 366);
@@ -167,12 +170,25 @@
             this.button2.Text = "SIGNUP";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(37, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(229, 19);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Employee management system";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(671, 400);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.checkBox1);
@@ -208,6 +224,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
     }
 }
 
