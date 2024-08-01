@@ -38,7 +38,7 @@
             this.login_btn = new System.Windows.Forms.Button();
             this.login_showpassword = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.login_sihnupBtn = new System.Windows.Forms.Button();
+            this.login_signupBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -154,21 +154,21 @@
             this.label5.Text = "No Account ?:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // login_sihnupBtn
+            // login_signupBtn
             // 
-            this.login_sihnupBtn.BackColor = System.Drawing.Color.Navy;
-            this.login_sihnupBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login_sihnupBtn.FlatAppearance.BorderSize = 0;
-            this.login_sihnupBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.login_sihnupBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.login_sihnupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login_sihnupBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.login_sihnupBtn.Location = new System.Drawing.Point(84, 366);
-            this.login_sihnupBtn.Name = "login_sihnupBtn";
-            this.login_sihnupBtn.Size = new System.Drawing.Size(135, 23);
-            this.login_sihnupBtn.TabIndex = 10;
-            this.login_sihnupBtn.Text = "SIGNUP";
-            this.login_sihnupBtn.UseVisualStyleBackColor = false;
+            this.login_signupBtn.BackColor = System.Drawing.Color.Navy;
+            this.login_signupBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_signupBtn.FlatAppearance.BorderSize = 0;
+            this.login_signupBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.login_signupBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.login_signupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_signupBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.login_signupBtn.Location = new System.Drawing.Point(84, 366);
+            this.login_signupBtn.Name = "login_signupBtn";
+            this.login_signupBtn.Size = new System.Drawing.Size(135, 23);
+            this.login_signupBtn.TabIndex = 10;
+            this.login_signupBtn.Text = "SIGNUP";
+            this.login_signupBtn.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -236,7 +236,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.login_sihnupBtn);
+            this.Controls.Add(this.login_signupBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.login_showpassword);
             this.Controls.Add(this.login_btn);
@@ -270,7 +270,7 @@
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.CheckBox login_showpassword;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button login_sihnupBtn;
+        private System.Windows.Forms.Button login_signupBtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
