@@ -31,5 +31,10 @@ namespace Employee_Management_system
         {
             Application.Exit();//exits the application on completion
         }
+
+        private void login_signupBtn_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();//creating a new object for register
+        }
     }
 }
