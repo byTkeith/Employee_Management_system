@@ -45,9 +45,36 @@ namespace Employee_Management_system
 
         private void sigup_btn_Click(object sender, EventArgs e)
         {
-            if(signup_username.Text=="" ||
-                signup_password.Text == ""){
-                MessageBox.Show("Please fill all blank fields", "Error Message",MessageBoxButtons.OK);
+            if (signup_username.Text == "" ||
+                signup_password.Text == "")
+            {
+                MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (connect.State != ConnectionState.Open)
+                {
+                    try
+                    {
+
+
+                        connect.Open();
+                        string insertData = "INSERT INTO users"+"(username, password, date_register)"+"VALUES(@username, @password, @dateReg)";
+                        using (SqlCommand cmd = new SqlCommand(insertData, connect)) {
+                            cmd.Parameters.AddWithValue("@username")
+                        }
+
+                    
+                    } 
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
+                }
             }
         }
     }
