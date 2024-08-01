@@ -13,7 +13,9 @@ using System.Data.SqlClient;
 namespace Employee_Management_system
 {
     public partial class RegisterForm: Form
-    {
+    {   
+        SqlConnection connect
+            = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Documents\employee.mdf;Integrated Security=True;Connect Timeout=30");
         public RegisterForm()
         {
             InitializeComponent();
@@ -43,7 +45,10 @@ namespace Employee_Management_system
 
         private void sigup_btn_Click(object sender, EventArgs e)
         {
-
+            if(signup_username.Text=="" ||
+                signup_password.Text == ""){
+                MessageBox.Show("Please fill all blank fields", "Error Message",MessageBoxButtons.OK);
+            }
         }
     }
 }
