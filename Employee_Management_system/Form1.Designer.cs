@@ -72,6 +72,7 @@
             this.exit.Size = new System.Drawing.Size(18, 19);
             this.exit.TabIndex = 2;
             this.exit.Text = "X";
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // label3
             // 

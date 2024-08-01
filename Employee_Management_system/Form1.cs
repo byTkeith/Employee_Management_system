@@ -26,5 +26,10 @@ namespace Employee_Management_system
         {
 
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();//exits the application on completion
+        }
     }
 }
