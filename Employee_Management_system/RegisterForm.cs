@@ -59,9 +59,13 @@ namespace Employee_Management_system
 
 
                         connect.Open();
+                        DateTime
                         string insertData = "INSERT INTO users"+"(username, password, date_register)"+"VALUES(@username, @password, @dateReg)";
                         using (SqlCommand cmd = new SqlCommand(insertData, connect)) {
-                            cmd.Parameters.AddWithValue("@username")
+                            cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", signup_password.Text.Trim());
+                            cmd.Parameters.AddWithValue("@dateReg", signup_username.Text.Trim());
+
                         }
 
                     
