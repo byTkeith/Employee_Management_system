@@ -131,10 +131,11 @@
             this.signup_showpassword.TabIndex = 23;
             this.signup_showpassword.Text = "Show Password";
             this.signup_showpassword.UseVisualStyleBackColor = true;
+            this.signup_showpassword.CheckedChanged += new System.EventHandler(this.signup_showpassword_CheckedChanged);
             // 
             // sigup_btn
             // 
-            this.sigup_btn.BackColor = System.Drawing.Color.Navy;
+            this.sigup_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.sigup_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sigup_btn.FlatAppearance.BorderSize = 0;
             this.sigup_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -145,8 +146,9 @@
             this.sigup_btn.Name = "sigup_btn";
             this.sigup_btn.Size = new System.Drawing.Size(75, 23);
             this.sigup_btn.TabIndex = 22;
-            this.sigup_btn.Text = "REGISTER";
+            this.sigup_btn.Text = "SIGNUP";
             this.sigup_btn.UseVisualStyleBackColor = false;
+            this.sigup_btn.Click += new System.EventHandler(this.sigup_btn_Click);
             // 
             // signup_password
             // 
@@ -154,8 +156,10 @@
             this.signup_password.Location = new System.Drawing.Point(405, 248);
             this.signup_password.Multiline = true;
             this.signup_password.Name = "signup_password";
+            this.signup_password.PasswordChar = '*';
             this.signup_password.Size = new System.Drawing.Size(206, 20);
             this.signup_password.TabIndex = 21;
+            this.signup_password.TextChanged += new System.EventHandler(this.signup_password_TextChanged);
             // 
             // label4
             // 
@@ -248,6 +252,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

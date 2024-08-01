@@ -111,12 +111,13 @@
             this.login_password.Location = new System.Drawing.Point(398, 245);
             this.login_password.Multiline = true;
             this.login_password.Name = "login_password";
+            this.login_password.PasswordChar = '*';
             this.login_password.Size = new System.Drawing.Size(206, 20);
             this.login_password.TabIndex = 6;
             // 
             // login_btn
             // 
-            this.login_btn.BackColor = System.Drawing.Color.Navy;
+            this.login_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.login_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.login_btn.FlatAppearance.BorderSize = 0;
             this.login_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -140,6 +141,7 @@
             this.login_showpassword.TabIndex = 8;
             this.login_showpassword.Text = "Show Password";
             this.login_showpassword.UseVisualStyleBackColor = true;
+            this.login_showpassword.CheckedChanged += new System.EventHandler(this.login_showpassword_CheckedChanged);
             // 
             // label5
             // 
@@ -252,6 +254,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

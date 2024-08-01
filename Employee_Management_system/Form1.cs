@@ -34,7 +34,14 @@ namespace Employee_Management_system
 
         private void login_signupBtn_Click(object sender, EventArgs e)
         {
-            RegisterForm registerForm = new RegisterForm();//creating a new object for register
+            RegisterForm regForm = new RegisterForm();//creating a new object for register
+            regForm.Show();
+            this.Hide();
+        }
+
+        private void login_showpassword_CheckedChanged(object sender, EventArgs e)
+        {
+            login_password.PasswordChar = login_showpassword.Checked ? '\0' : '*';
         }
     }
 }
