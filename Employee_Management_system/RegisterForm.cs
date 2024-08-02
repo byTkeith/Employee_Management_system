@@ -66,12 +66,14 @@ namespace Employee_Management_system
 
                             int count= (int)checkUser.ExecuteScalar();
                             if (count > 1) {
-                                MessageBox.Show(signup_username.Text.Trim()+"is already taken", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(signup_username.Text.Trim()+" is already taken", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
-                            {
+                            {//testing commits
+
                                 DateTime today1 = DateTime.Today;
-                                string insertData1 = "INSERT INTO users" + "(username, password, date_register)" + "VALUES(@username, @password, @dateReg)";
+                                string insertData1 = "INSERT INTO users" + "(username, password, data_register" +
+                                    ")" + "VALUES(@username, @password, @dateReg)";
                                 using (SqlCommand cmd = new SqlCommand(insertData1, connect))
                                 {
                                     cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
@@ -92,7 +94,7 @@ namespace Employee_Management_system
 
 
                         DateTime today=DateTime.Today;
-                        string insertData = "INSERT INTO users"+"(username, password, date_register)"+"VALUES(@username, @password, @dateReg)";
+                        string insertData = "INSERT INTO users"+"(username, password, data_register)"+"VALUES(@username, @password, @dateReg)";
                         using (SqlCommand cmd = new SqlCommand(insertData, connect)) {
                             cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
                             cmd.Parameters.AddWithValue("@password", signup_password.Text.Trim());
