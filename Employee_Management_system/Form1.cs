@@ -16,7 +16,7 @@ namespace Employee_Management_system
         SqlConnection connect
             = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Documents\employee.mdf;Integrated Security=True;Connect Timeout=30");
         public Form1()
-        {   
+        {
 
             InitializeComponent();
         }
@@ -56,16 +56,44 @@ namespace Employee_Management_system
             }
             else
             {
-                try
+                if (connect.State == ConnectionState.Closed)
                 {
-                    connect.Open();
-                }
-                catch (Exception ex) {
-                    MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    connect.Close();    
+                    try
+                    {
+                        connect.Open();
+                        string selectDate = "SELECT * FROM users WHERE username=@username " + "AND password=@password";
+                        using (SqlCommand cmd = new SqlCommand(selectDate, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@username", login_username.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", login_password.Text.Trim());
+                            //cmd.Parameters.AddWithValue("@username", login_username.Text.Trim());
+
+                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+
+                            if (table.Rows.Count > 1)
+                            {
+                                MessageBox.Show("Login Successful!\nWelcome "+login_username.Text.Trim(), "information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MainForm mForm= new MainForm();
+                                mForm.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect Username/Password!", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
                 }
             }
         }
